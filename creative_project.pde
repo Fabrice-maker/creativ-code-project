@@ -31,6 +31,7 @@ void draw() {
 *line (mouseX, mouseY, mouseX, mouseY);
 *lines too thin and too far appart compared to circle
 * TODO:add variables for color and circle size also find a way to get better/
+* add a menu for colors. and junk maybey list function from snap
 * fluid lines
 * then learn how to import images ex empty copyright free coloring books
 * makesure that the images are on a diff layer because dint wanna draw over lines
