@@ -33,6 +33,8 @@ void draw() {
 * TODO:add variables for color and circle size also find a way to get better/
 * fluid lines
 * then learn how to import images ex empty copyright free coloring books
+* makesure that the images are on a diff layer because dint wanna draw over lines
+* probably by having the image reaload first and forever on loop
 * orgavize code (indentation)
 * undo/redo button???
 *fill certian areas???
