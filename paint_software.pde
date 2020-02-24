@@ -40,8 +40,14 @@ void draw() {
    g = 0;
    b = 255;
    }
-  
- keyReleased();
+   
+  keyReleased();
+  if (key == 'e') {
+   r = 255;
+   g = 255;
+   b = 255;
+   
+   } keyReleased();
   if (key == 'k') {
    r = 0;
    g = 0;
