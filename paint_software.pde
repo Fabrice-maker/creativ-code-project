@@ -1,6 +1,6 @@
 /*
 *author; fabrice sannon
-*date: 2/24/20
+*date: 3/2/20
 * https;//processing.org/reference/ 
 *look there to get help on functions
 */
@@ -9,12 +9,17 @@ void setup(){
  frameRate(150);
  fullScreen();
  background(255, 255, 255);
-}
+ int size = 25;
+} 
+
+int size = 25;
 
 void draw() {
+  // make variables
   int r = 0;
   int g = 0;
   int b = 0;
+
   
  // change colors 
  fill(0);
@@ -25,8 +30,7 @@ void draw() {
    g = 0;
    b = 0;
    }
-
-  
+   
  keyReleased();
   if (key == 'g') {
    r = 0;
@@ -41,41 +45,57 @@ void draw() {
    b = 255;
    }
    
-  keyReleased();
+ keyReleased();
   if (key == 'e') {
    r = 255;
    g = 255;
    b = 255;
+   }
    
-   } keyReleased();
+ keyReleased();
   if (key == 'k') {
    r = 0;
    g = 0;
    b = 0;
    }
    
-  // drawshapes
-  
-  // clear the page
+ // drawshapes
+          
+ // clear the page
  if (keyPressed) {
   if (key == ' ') {
-  noStroke(); 
-  fill(255);
-  rect(0, 0, 1500, 1500);
+   noStroke(); 
+   fill(255);
+   rect(0, 0, 1500, 1500);
+   }
+  }
+ 
+ //change size
+ if (keyPressed) {
+ if (key == '.') {
+  size = size + 2 ;   
   }
  }
  
-  //draw and size change
+ if (keyPressed) {
+  if (key == ',') {
+   size = size - 2 ;
+   if (size <= 20) {
+     size = 25 ;
+    }
+   }
+  }
+ 
+ //draw lines
  fill(r, g, b);
  if (mousePressed) {
-  ellipse(mouseX, mouseY, 25, 25);
+  ellipse(mouseX, mouseY, size, size );
  }
 }
 
 /*
 TODO:
 * be able to change layers
-* be able to change circle size
 * add a menu for color
 * make the lines more consistant
 * import empty copyright free coloring books images ???
@@ -83,7 +103,9 @@ TODO:
 probably by having the image reaload first and forever on loop )
 * undo/redo button???
 *fill certian areas???
+
 DONE:
+be able to change circle size
 be able to draw
 clear the page
 add variables for color 
