@@ -1,17 +1,17 @@
 /*
 *author; fabrice sannon
-*date: 3/2/20
+*date: 3/30/20
 * https;//processing.org/reference/ 
 *look there to get help on functions
 */
 
 void setup(){
  frameRate(150);
- fullScreen();
+// fullScreen();
+ size(1500, 500);
  background(255, 255, 255);
- int size = 25;
 } 
-
+int paint = 0;
 int size = 25;
 
 void draw() {
@@ -20,7 +20,23 @@ void draw() {
   int g = 0;
   int b = 0;
 
-  
+  // mennu
+  stroke( 0,0,0);
+  fill(255, 255, 255);
+  line(0, 0, 1500, 0);
+  rect(1300, 0, 200, 500);
+  if (mouseX > 1300) {
+   paint = 1 ;
+   size = 0 ;
+  } else { paint = 0  ;
+  }
+  if (paint == 0) {
+    noStroke();
+  }
+ // MENU ITEMS
+ 
+ 
+ 
  // change colors 
  fill(0);
  noStroke();
@@ -80,7 +96,7 @@ void draw() {
  if (keyPressed) {
   if (key == ',') {
    size = size - 2 ;
-   if (size <= 20) {
+   if ((size <= 20) && (paint == 0))  {
      size = 25 ;
     }
    }
@@ -96,17 +112,17 @@ void draw() {
 /*
 TODO:
 * be able to change layers
-* add a menu for color
+* put stuff in menu
 * make the lines more consistant
 * import empty copyright free coloring books images ???
 (makesure that the images are on a diff layer because dont wanna draw over lines 
 probably by having the image reaload first and forever on loop )
 * undo/redo button???
 *fill certian areas???
-
 DONE:
 be able to change circle size
 be able to draw
 clear the page
 add variables for color 
+make a menu area
 */
